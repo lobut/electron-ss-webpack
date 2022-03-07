@@ -12,8 +12,12 @@ import path from 'path';
 import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
+import { counter, output } from 'common/utils';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
+
+console.log(counter);
+output();
 
 export default class AppUpdater {
   constructor() {
